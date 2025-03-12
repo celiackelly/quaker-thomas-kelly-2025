@@ -1,7 +1,7 @@
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 3rem 6rem;
+  padding: 3rem 2rem;
 }
 
 .site-icon {
@@ -20,6 +20,15 @@ nav li {
   font-weight: 700;
 }
 
-nav li a {
+nav a {
   text-decoration: none;
+  padding: .75rem 2rem;
+}
+/* 
+nav a:active {
+  border: 1px solid black;
+} */
+
+.current {
+  border: 1px solid black;
 }
