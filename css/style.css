@@ -1,6 +1,22 @@
+body {
+  width: 100%
+}
+
+#page-wrapper {
+  padding: 0% 5%;
+  max-width: 1400px;
+}
+
+header {
+  position: sticky;
+  top: 0px;
+  background-color: #ffffff;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 3rem 2rem;
 }
 
@@ -11,11 +27,13 @@ nav {
 .nav-link-container {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  width: 40%;
 }
 
 nav li {
   list-style: none;
-  padding-left: 5rem;
+  /* padding-left: 5rem; */
   text-transform: uppercase;
   font-weight: 700;
 }
