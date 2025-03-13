@@ -42,11 +42,13 @@ nav a {
   text-decoration: none;
   padding: .75rem 2rem;
 }
-/* 
-nav a:active {
-  border: 1px solid black;
-} */
 
 .current {
   border: 1px solid black;
+}
+
+main, hgroup, section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
