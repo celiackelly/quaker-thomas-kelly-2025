@@ -28,13 +28,13 @@ nav {
 .nav-link-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-end;
   width: 40%;
 }
 
 nav li {
   list-style: none;
-  /* padding-left: 5rem; */
+  padding-left: 2rem;
   text-transform: uppercase;
   font-weight: 700;
 }
