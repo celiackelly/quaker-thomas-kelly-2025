@@ -48,7 +48,7 @@ nav a {
   border: 1px solid black;
 }
 
-main, hgroup, section {
+main, hgroup {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,5 +56,10 @@ main, hgroup, section {
 
 main {
   max-width: 1120px;
+  margin: 0 auto;
+}
+
+.centered {
+  display: block;
   margin: 0 auto;
 }
