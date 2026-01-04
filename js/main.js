@@ -13,26 +13,48 @@
 //   });
 // };
 
+// document.addEventListener("DOMContentLoaded", (event) => styleCurrentLink());
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   // Select all navigation links in both the top nav and mobile menu
+//   const navLinks = document.querySelectorAll("nav ul a, .menubar a");
+
+//   // Get current page filename, default to index.html if path is "/"
+//   const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
+//   navLinks.forEach((link) => {
+//     // Get href of the link
+//     const linkPage = link.getAttribute("href");
+
+//     if (linkPage === currentPage) {
+//       link.classList.add("current"); // Highlight the current page link
+//     } else {
+//       link.classList.remove("current"); // Remove from others
+//     }
+//   });
+// });
+
 document.addEventListener("DOMContentLoaded", () => {
-  // Select all navigation links in both the top nav and mobile menu
   const navLinks = document.querySelectorAll("nav ul a, .menubar a");
 
-  // Get current page filename, default to index.html if path is "/"
-  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  // Get current page: if root "/", treat as "index"
+  let currentPage = window.location.pathname.split("/").pop();
+  if (!currentPage || currentPage === "") currentPage = "index";
 
   navLinks.forEach((link) => {
-    // Get href of the link
-    const linkPage = link.getAttribute("href");
+    // Remove ".html" from the link href for comparison
+    const linkPage = link
+      .getAttribute("href")
+      .replace(".html", "")
+      .replace(/^\//, "");
 
     if (linkPage === currentPage) {
       link.classList.add("current"); // Highlight the current page link
     } else {
-      link.classList.remove("current"); // Remove from others
+      link.classList.remove("current");
     }
   });
 });
-
-document.addEventListener("DOMContentLoaded", (event) => styleCurrentLink());
 
 //navbar code from here: https://codesandbox.io/p/sandbox/responsive-navbar-html-css-js-1t4um7?file=%2Fscript.js%3A1%2C1-9%2C1
 const mobileNav = document.querySelector(".hamburger");
