@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .replace(/^\//, "");
 
     // Treat "index" as root path
-    if (currentPage === "index" && linkPage === "index") {
+    if (currentPage === "index" && linkPage === "") {
       link.classList.add("current");
     } else if (linkPage === currentPage) {
       link.classList.add("current");
