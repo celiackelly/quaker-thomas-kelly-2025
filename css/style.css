@@ -71,6 +71,29 @@ main {
   max-width: 90vw;
 }
 
+/* Larger than mobile */
+@media (min-width: 400px) {
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  /* .hero-img {
+    max-width: 50vw;
+  } */
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+}
+
 footer {
   background-color: #f2f2f2;
   text-align: center;
