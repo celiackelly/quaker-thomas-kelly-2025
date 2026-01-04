@@ -78,8 +78,16 @@ p.side-comment {
 }
 
 .hero-img {
-  flex: 1 1 0;
-  max-width: 90vw;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: 1200px) {
+  .hero-img {
+    max-width: 80%; /* Optional: scale down on huge screens */
+  }
 }
 
 /* Navigation */
