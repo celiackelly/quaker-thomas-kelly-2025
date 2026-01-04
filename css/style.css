@@ -102,6 +102,19 @@ video {
   margin: 2rem auto;
 }
 
+/* Comment Box*/
+
+.comments li {
+  list-style: none;
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+.comment-author {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
 /* Navigation */
 nav {
   padding: 3rem 2rem;
