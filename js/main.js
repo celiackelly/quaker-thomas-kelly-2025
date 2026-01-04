@@ -37,19 +37,24 @@
 document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll("nav ul a, .menubar a");
 
-  // Get current page: if root "/", treat as "index"
+  // Get current page
   let currentPage = window.location.pathname.split("/").pop();
-  if (!currentPage || currentPage === "") currentPage = "index";
+
+  // Handle root path "/"
+  if (!currentPage) currentPage = "index";
 
   navLinks.forEach((link) => {
-    // Remove ".html" from the link href for comparison
+    // Normalize href: remove ".html" and any leading slash
     const linkPage = link
       .getAttribute("href")
       .replace(".html", "")
       .replace(/^\//, "");
 
-    if (linkPage === currentPage) {
-      link.classList.add("current"); // Highlight the current page link
+    // Treat "index" as root path
+    if (currentPage === "index" && linkPage === "index") {
+      link.classList.add("current");
+    } else if (linkPage === currentPage) {
+      link.classList.add("current");
     } else {
       link.classList.remove("current");
     }
