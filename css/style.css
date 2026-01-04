@@ -67,6 +67,12 @@ p.side-comment {
   font-size: 0.9em;
 }
 
+blockquote {
+  font-style: italic;
+  font-weight: 600;
+  text-align: center;
+}
+
 /* Images */
 .site-icon {
   max-height: 40px;
@@ -88,6 +94,12 @@ p.side-comment {
   .hero-img {
     max-width: 80%; /* Optional: scale down on huge screens */
   }
+}
+
+video {
+  max-height: 90vh;
+  display: block;
+  margin: 2rem auto;
 }
 
 /* Navigation */
